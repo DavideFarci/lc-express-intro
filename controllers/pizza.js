@@ -27,6 +27,13 @@ function index(req, res) {
   res.send("Lista delle pizze");
 }
 
+function show(req, res) {
+  const pizzaId = req.params.id;
+
+  const pizza = menu.find((pizza) => pizza.id === pizzaId);
+}
+
 module.exports = {
   index,
+  show,
 };

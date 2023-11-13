@@ -1,0 +1,11 @@
+const express = require("express");
+const router = express.Router();
+const pizzaController = require("../controllers/pizza");
+
+// index
+router.get("/", pizzaController.index);
+
+// show
+router.get("/:id", pizzaController.show);
+
+module.exports = router;
